@@ -6,43 +6,61 @@ public class Qes1_13 {
 
 		// 問１～３-----------------------------------
 
-		byte a = 10;// バイト型
-		System.out.println(a);
+		byte firstByte = 0;// バイト型の初期値
 
-		short b = 100;// 短整数型
-		System.out.println(b);
+		short firstShort = 0;// 短整数型の初期値
 
-		int c = 1000; // 整数型
-		System.out.println(c);
+		int firstInt = 0;// 整数型の初期値
 
-		long d = 10000;// 長整数型
-		System.out.println(d);
+		long firstLong = 0L;// 長整数型の初期値
 
-		float e = (float) 9.5;// 単精度浮動小数点型
-		System.out.println(e);
+		float firstFloat = 0.0f;// 単精度浮動小数点型の初期値
 
-		double f = 10.5;// 倍精度浮動小数点型
-		System.out.println(f);
+		double firstDoble = 0.0d;// 倍精度浮動小数点型の初期値
 
-		char g = 'a';// 文字型
-		System.out.println(g);
+		char firstChar = 0;// 文字型の初期値
 
-		String h = "ハロー";//文字列型 
-		System.out.println(h);
+		String firstString = null;// 文字列型の初期値
 
-		boolean kk;// ブーリアン型
-		kk = true;
-		System.out.println(kk);
+		boolean trueth = false;// ブーリアン型の初期値
+
+		byte byteNumber = 10;// バイト型
+		System.out.println(byteNumber);
+
+		short shortNumber = 100;// 短整数型
+		System.out.println(shortNumber);
+
+		int intNumber = 1000; // 整数型
+		System.out.println(intNumber);
+
+		long longNumber = 10000;// 長整数型
+		System.out.println(longNumber);
+
+		float floatNumber = (float) 9.5;// 単精度浮動小数点型
+		System.out.println(floatNumber);
+
+		double doubleNumber = 10.5;// 倍精度浮動小数点型
+		System.out.println(doubleNumber);
+
+		char charNumber = 'a';// 文字型
+		System.out.println(charNumber);
+
+		String stringNumber = "ハロー";//文字列型 
+		System.out.println(stringNumber);
+
+		boolean booleanWord;// ブーリアン型
+		booleanWord = true;
+		System.out.println(booleanWord);
 
 		// ---------------------------------------------
 
 		// 問４----------------------------------------------------------
 
-		long j = a + b + c + d;// 長整数型での和算
-		System.out.println(j);
+		long manyNumber = byteNumber + shortNumber + intNumber + longNumber;// 長整数型での和算
+		System.out.println(manyNumber);
 
-		byte i = (byte) (a + a);// 短整数型での和算
-		System.out.println(i);
+		byte byNumber = (byte) (byteNumber + byteNumber);// 短整数型での和算
+		System.out.println(byNumber);
 
 		char name = 'a';
 		String name2 = "ハロー";
@@ -53,13 +71,13 @@ public class Qes1_13 {
 
 		System.out.println(name + name2 + is);
 
-		long lo = (long) (a + b + c + d + e + f);// 長整数型での和算
+		long lo = (long) (byteNumber + shortNumber + intNumber + longNumber + floatNumber + doubleNumber);// 長整数型での和算
 		System.out.println((int) lo);
 
-		double na = f / b;// 倍精度浮動小数点型での除算
+		double na = doubleNumber / shortNumber;// 倍精度浮動小数点型での除算
 		System.out.println(na);
 
-		int nu = a - b;// 整数型での減算
+		int nu = byteNumber - shortNumber;// 整数型での減算
 		System.out.println(nu);
 
 		// -----------------------------------------------------------------
@@ -82,13 +100,13 @@ public class Qes1_13 {
 
 		//--------------------------------------------------
 
-		// 問８～９（問６に再代入、問８に自己代入）
+		// 問８（問６に再代入）------------------------------------------------
 
 		name3 = "鈴木一郎";// 名前の再代入
-		age = 24 + 24;// 年齢の再代入と自己代入
-		height = 168.5 + 168.5;// 身長の再代入と自己代入
-		weight = (float) ((float) 64.2 + 64.2);// 体重の再代入と自己代入
-		favoriteFood = "オムライス";// 好きな食べ物の再代入と自己代入
+		age = 24;// 年齢の再代入
+		height = 168.5;// 身長の再代入
+		weight = (float) 64.2;// 体重の再代入
+		favoriteFood = "オムライス";// 好きな食べ物の再代入
 
 		System.out.println("初めまして" + name3 + "です。");
 		System.out.println("年齢は" + age + "歳です。");
@@ -99,14 +117,14 @@ public class Qes1_13 {
 		/*
 		 * 下記はBMIの計算式（変数のみの計算式）
 		 */
-		double height2 = height / b;
+		double height2 = height / shortNumber;
 		double bmi = weight / (height2 * height2);
 
-		System.out.println("bmiは" + String.format("%.2f", bmi) + "です。");
+		System.out.println("bmiは" + String.format("%.1f", bmi) + "です。");
 
 		// ---------------------------------------------------------------------
 
-		// 問１０-------------------------------------------------------------------------
+		// 問１０（問８に対するブーリアン型）---------------------------------------------
 
 		boolean isOverTwentyage;// ２５歳以上ならtrueとなるブーリアン型
 		int yourAge = age;
@@ -117,7 +135,7 @@ public class Qes1_13 {
 
 		//---------------------------------------------------------------------------------
 
-		// 問１１----------------------------------------------------------------------
+		// 問１１（問８に対しての文字列型への交換）-------------------------------------
 
 		String text = String.valueOf(age);// 年齢の文字列型への交換
 		String text2 = String.valueOf(height);// 身長の文字列型への交換
@@ -126,10 +144,11 @@ public class Qes1_13 {
 		System.out.println(("年齢=" + text) + ("身長=" + text2) + ("体重=" + text3));
 
 		// -----------------------------------------------------------------------------
+		
+		
+		// 問１２(問１１に対して整数型への交換）-------------------
 
-		// 問１２--------------------------------------------------
-
-		long numbe = Long.parseLong(text);
+	    long numbe = Long.parseLong(text);
 		int number = (int) numbe;
 
 		System.out.println(number);
@@ -137,13 +156,16 @@ public class Qes1_13 {
 		double number2 = Double.parseDouble(text2);
 		int number3 = (int) number2;
 
-		// 整数型に交換させるために倍精度浮動小数点型へ先に交換
+		/**
+		 *  整数型に交換させるために倍精度浮動小数点型へ先に交換
+		 */
 
 		System.out.println(number3);
 
 		// --------------------------------------------------------
-
-		// 問１３-------------------------------------
+		
+		
+		// 問１３(問１２に対するブーリアン型）-------------------------------------
 
 		boolean docchika;
 		long age3 = number;
@@ -153,6 +175,30 @@ public class Qes1_13 {
 		System.out.println(docchika);
 
 		// --------------------------------------------
+
+		// 問９-----------------------------------------------------------------
+
+		age += age;// 問８の年齢に対して自己代入
+		height += height;// 問８の身長に対して自己代入
+		weight += weight;// 問８の体重に対しての自己代入
+
+		System.out.println("初めまして" + name3 + "です。");
+		System.out.println("年齢は" + age + "歳です。");
+		System.out.println("身長は" + height + "cmです。");
+		System.out.println("体重は" + weight + "kgです。");
+		System.out.println("好きな食べ物は" + favoriteFood + "です。");
+		
+		/**
+		 * 下記は問９のBMIの計算式（変数のみの計算式）
+		 */
+
+		double heighta = height / shortNumber;
+		double bmia = weight / (heighta * heighta);
+
+		System.out.println("bmiは" + String.format("%.2f", bmia) + "です。");
+
+
+
 
 	}
 
